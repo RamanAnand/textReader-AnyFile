@@ -1,0 +1,31 @@
+##################################################################################
+
+ OCR for windows -4th March 2019 - Author : Raman Anand
+
+##################################################################################
+STEPS TO INSTALL AND CONFIGURE OPENCV ::
+
+download openCV pack from https://opencv.org/releases.html (opencv-3.4.5-vc14_vc15) --> verified version
+
+Install exe in some folder of your choice
+
+We need two file 
+C:\...\opencv\build\java\opencv-3xx.jar and 
+C:\...\OpenCV\opencv\build\java\x64\opencv_java3xx.dll --> xx is version of opencv downloaded
+
+we create user library in eclipse:
+a) open >> BuildPath >>User Libraries >> New >> provide name for library 
+b) select newly created library >> Edit >> browse to select "opencv-3xx.jar"
+c) Extend it and select Native library location >> Edit
+d) select external folder and browse to select opencv libraries "C:\...\OpenCV\opencv\build\java\x64"
+
+STEP TO INSTALL AND CONFIGURE TESSERACT ::
+
+1) Download your language files from https://github.com/tesseract-ocr/tessdata/tree/3.04.00
+For example, for eng, I downloaded all files with eng prefix.
+
+2) Put them into tessdata directory inside of some folder. Add this folder into System Path variables as TESSDATA_PREFIX.
+Result will be System env var: TESSDATA_PREFIX=D:/Java/OCR 
+And OCR folder has tessdata folder with languages files.
+
+### DOONE READY TO USE OCR WITH ANY KIND OF FILES AVAILABLE WITH READABLE CHARACTER
